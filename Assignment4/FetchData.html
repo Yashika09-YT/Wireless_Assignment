@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+</head>
+<body>
+
+    <h2>Weather Data</h2>
+    <button onclick="fetchWeather()">Get Weather</button>
+    <p id="weather"></p>
+
+    <script>
+        function fetchWeather() {
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=bd5e378503939ddaee76f12ad7a97608')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("weather").innerText = `Temperature: ${data.main.temp/10}°C`;
+                })
+                .catch(error => console.log("Error:", error));
+        }
+    </script>
+
+</body>
+</html>

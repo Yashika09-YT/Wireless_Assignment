@@ -1,0 +1,17 @@
+CGI (Common Gateway Interface) vs Servlets:
+
+1. Process Handling:
+   - CGI creates a new process for each request, consuming more memory and CPU.
+   - Servlets are multithreaded and run within the same JVM, making them efficient.
+
+2. Performance:
+   - CGI scripts are slower due to process creation overhead.
+   - Servlets are faster as they handle requests within the same thread.
+
+3. Scalability:
+   - CGI struggles with high traffic due to excessive resource usage.
+   - Servlets scale better due to efficient memory management.
+
+4. Programming Language:
+   - CGI scripts are usually written in Python, Perl, or Shell.
+   - Servlets are written in Java and run within a Java EE environment.

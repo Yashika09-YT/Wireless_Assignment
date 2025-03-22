@@ -1,0 +1,20 @@
+
+<web-app>
+    <servlet>
+        <servlet-name>BasicServlet</servlet-name>
+        <servlet-class>servlets.BasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BasicServlet</servlet-name>
+        <url-pattern>/basic</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/welcome.jsp</url-pattern>
+    </filter-mapping>
+</web-app>

@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #ff9800;
+}
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Content Section */
+.content-section {
+    padding: 50px;
+    text-align: center;
+}
+.card {
+    width: 200px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.service-box {
+    width: 150px;
+    padding: 15px;
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.service-box:hover {
+    transform: scale(1.1);
+}
+
+/* Parallax Effect */
+.parallax {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    padding: 100px 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.social-icons i {
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    color: #ff9800;
+}

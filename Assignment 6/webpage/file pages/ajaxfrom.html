@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Submit Your Name</h2>
+    <form id="ajaxForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        $("#ajaxForm").submit(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "../ajaxServlet",
+                type: "POST",
+                data: { name: $("#name").val() },
+                success: function(response) {
+                    $("#response").html("<h3>" + response.message + "</h3>");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
